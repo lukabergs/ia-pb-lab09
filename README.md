@@ -1,4 +1,4 @@
-# LABORATORIO 9
+# LABORATORIO 09
 ## Listas estáticas, Matrices y Tipos mixtos
 ### TAREA 1. Ejercicios obligatorios
 1. **Insertar en medio.** Implementa el _procedimiento_ **Insertar_En_Medio** que, a partir de una lista estática y un número natural N, lo inserte en la mitad de la lista, si el número de elementos de la lista es par. Si el número de elementos de la lista es impar o la lista está llena se deja la lista como está. Por ejemplo, si L= [4, 5, 3, 6] y N= 9 debería quedar [4, 5, 9, 3, 6]. Si L= [4, 6, 3] y N= 9 debería quedar [4, 6, 3]. Si L= [] y N= 3 debería quedar [3].
