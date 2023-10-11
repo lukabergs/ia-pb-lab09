@@ -7,7 +7,9 @@
 4. **Intersección.** Implementa la _función_ **comunes** que, dados dos vectores de enteros cuyos valores están ordenados crecientemente, devuelva cuántos elementos son comunes a los dos vectores. Como ejemplo, con (3, 4, 5, 6, 7, 8, 9, 10, 11, 12) y (9, 11, 13, 15, 17, 19, 21, 23, 25, 27), devuelve 2 (el 9 y el 11 son comunes a los dos). Nota: El hecho de que los vectores estén ordenados debe influir en el algoritmo a utilizar y una solución con dos bucles anidados no es aceptable.
 5. **Calcular el número de vecinos por vivienda del edificio.** Implementa en Ada el _procedimiento_ **Obtener_Num_Vecinos_Por_Vivienda** que, dados los datos de toda la comunidad, obtenga la distribución de los vecinos por vivienda en el rascacielos. Tenemos datos de los 3.546 vecinos de una comunidad de vecinos. Por cada vecino tenemos información de su nombre, número de piso y mano donde vive. La comunidad vive en un rascacielos de 100 pisos (numerados del 1 al 100) y en cada piso hay 10 manos (nombradas desde la ‘A’ a la ‘J’). Para acceder más fácilmente al número de habitantes por cada vivienda (piso y mano concretos), queremos transformar los datos en otra estructura de datos (matriz T_Rascacielos). Por ejemplo, si en el 1º A viven 5 personas en el vector de la comunidad habrá 5 posiciones en las que aparecerá información de vecinos del piso 1 y mano A. Tras el proceso de ir revisando el vector de la comunidad de vecinos, en R (de Programación básica 53 Lab09 tipo T_Rascacielos) aparecerá el valor 5 en la primera celda, es decir, R(1, A)=5. NOTA sobre eficiencia: el procedimiento debe resolver el problema con un único recorrido del vector de la Comunidad.
 
-    ![Fig. 1](https://github.com/lukabergs/ia-pb-lab09/assets/52601751/1d9c445c-ed47-4696-9448-8ef699ac2411)
+    <div align="center">
+        <img src="https://github.com/lukabergs/ia-pb-lab09/assets/52601751/1d9c445c-ed47-4696-9448-8ef699ac2411" title="Fig. 1">
+    </div>
 
 6. **Obtener información de consumos.** Tenemos información de una comunidad de vecinos que vive distribuida en un rascacielos de 100 pisos (numerados del 1 al 100) y por cada piso hay 10 manos (nombradas de la 'A' a la 'J'). Por cada vivienda (piso y mano concretos) tenemos información del consumo de electricidad, consumo de gas y número de habitantes. Toda esa información la representamos con T_Edificio. Implementa el _procedimiento_ **Obtener_Consumos** que, dada la información de todo el edificio, y _**utilizando un único recorrido de la matriz**_, obtenga, teniendo en cuenta el número de habitantes en cada piso: (1) el consumo eléctrico medio por habitante de todo el rascacielos (un único valor para todo el edificio, el cálculo usa todos los habitantes del edificio), y (2) los consumos medios de gas por habitante de cada mano del rascacielos (10 valores distintos, uno para cada mano; usa T_Consumo_Medio_Manos para el resultado; en cada cálculo solo se tienen en cuenta los habitantes de esa mano en el edificio).
 ### TAREA 2. Ejercicios extra
@@ -22,22 +24,30 @@
 ### TAREA 3. Ejercicios para pensar – Otros tipos de registro
 12. **Localizar espacio en blanco de sudoku.** En un sudoku siempre hay 9 fichas, cada una con los 9 números (1, 2, …9). En este ejercicio se tiene una matriz NxN (9x9) para representar un sudoku a medio rellenar. En una ficha sin rellenar, en blanco, los números en blanco se representan con el valor 0. Aparte, se dispone de una ficha, representada por una matriz cuadrada MxM (3x3), que hay que colocar en el sudoku. Por ejemplo: Se dispone del siguiente sudoku, que tiene hueco para una ficha, y una ficha a colocar:
 
-    ![Fig. 2](https://github.com/lukabergs/ia-pb-lab09/assets/52601751/d4cb3c68-142d-4ae3-bbac-d8d8a95ab6c0)
+    <div align="center">
+        <img src="https://github.com/lukabergs/ia-pb-lab09/assets/52601751/d4cb3c68-142d-4ae3-bbac-d8d8a95ab6c0" title="Fig. 2">
+    </div>
 
     Una ficha no encaja en el sudoku si algún número se repite en alguna columna, fila, o en la misma ficha. Por ejemplo, tal y como está la ficha, no encaja en el hueco del sudoku, pero también se quiere examinar si puede ser colocada girada 90, 180 o 270 grados:
 
-    ![Fig. 3](https://github.com/lukabergs/ia-pb-lab09/assets/52601751/dece5395-9320-4dbb-888c-82d96ba10f09)
+    <div align="center">
+        <img src="https://github.com/lukabergs/ia-pb-lab09/assets/52601751/dece5395-9320-4dbb-888c-82d96ba10f09" title="Fig. 3">
+    </div>
 
     En la fila 7, se repiten los números 8 y 3. En la fila 8 se repiten los números 7 y 9. En la fila 9, se repiten los números 2 y 5. En la columna 7, se repiten los números 6 y 9. En la columna 8 se repiten los números 3 y 5. En la columna 9, se repiten los números 1 y 7. La ficha, tal y como está, no se puede colocar en el hueco blanco del sudoku. Pero, la ficha se puede rotar hacia la derecha para poder encontrar su colocación. Por ejemplo, si se rota la ficha hacia la derecha, se obtienen las siguientes fichas:
 
-    ![Fig. 4](https://github.com/lukabergs/ia-pb-lab09/assets/52601751/cb99894f-8867-4790-8678-1306298f44a3)
+    <div align="center">
+        <img src="https://github.com/lukabergs/ia-pb-lab09/assets/52601751/cb99894f-8867-4790-8678-1306298f44a3" title="Fig. 4">
+    </div>
 
     Si se rota la ficha 270º, entonces sí que encaja en el sudoku, ya que los números no se repiten en ninguna fila ni columna:
 
-    ![Fig. 5](https://github.com/lukabergs/ia-pb-lab09/assets/52601751/3524fdd4-a2bb-4ed7-9f1c-86ae37639a4e)
+    <div align="center">
+        <img src="https://github.com/lukabergs/ia-pb-lab09/assets/52601751/3524fdd4-a2bb-4ed7-9f1c-86ae37639a4e" title="Fig. 5">
+    </div>
 
     Implementa el _procedimiento_ **encontrar_espacio_blanco**. Un espacio en blanco es una submatriz MxM con todas las casillas con el valor 0. Se supone que si un número tiene el valor 0, el resto de los números de esa ficha también lo son.
   
-13. **Rotar matriz derecha de sudoku.** Implementa el _procedimiento_ **rotar_matriz_derecha_90**, que, dada una ficha, la rote 90º a la derecha. Nota: Se busca una solución transportable a fichas de cualquier tamaño, por lo que se penalizarán soluciones que no incluyan un bucle.
+12. **Rotar matriz derecha de sudoku.** Implementa el _procedimiento_ **rotar_matriz_derecha_90**, que, dada una ficha, la rote 90º a la derecha. Nota: Se busca una solución transportable a fichas de cualquier tamaño, por lo que se penalizarán soluciones que no incluyan un bucle.
 
-14. **Comprobar filas correctas de sudoku.** Implementa la _función_ **filas_correctas**, que, dados un sudoku sin terminar (con un espacio para una ficha), una ficha, y la especificación de la casilla superior izquierda de un hueco del sudoku, compruebe que si el resultado de añadir la ficha a el sudoku con un espacio en blanco, todas las filas y las columnas cumplen los requisitos.
+13. **Comprobar filas correctas de sudoku.** Implementa la _función_ **filas_correctas**, que, dados un sudoku sin terminar (con un espacio para una ficha), una ficha, y la especificación de la casilla superior izquierda de un hueco del sudoku, compruebe que si el resultado de añadir la ficha a el sudoku con un espacio en blanco, todas las filas y las columnas cumplen los requisitos.
